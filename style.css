@@ -11,6 +11,11 @@
 
 body{
     background-color: #e5e5e5;
+    background-image:url(img/bolsa-de-valores-3.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 header{
     background-color: #1b83e2;
@@ -35,7 +40,13 @@ h1{
 
 main{
     padding: 24px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, rgb(235, 230, 230),rgb(106, 175, 106),rgb(218, 218, 103),rgb(66, 46, 66));
+    animation: cor 60s ease;
 }
+
+
 
 label{
    
@@ -96,7 +107,7 @@ button:active{
 
 .bass{
     
-    background: #e5e5e5;
+    background: #4b30305d;
     border-radius: 4px;
     border: 2px solid #1B83E2;
     animation: rotate 3s infinite ease-in-out;
@@ -108,13 +119,13 @@ button:active{
 }.currency-name{
     
     font-size: 14px;
-    color: #777777;
+    color: #fffafa;
 }
 .currency-value{
     
     font-size: 20px;
     font-weight: bold;
-    color: #1B83E2;
+    color: #aad0f3;
 }
 .arrow{
     margin: 15px auto;

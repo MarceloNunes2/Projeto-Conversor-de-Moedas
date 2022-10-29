@@ -2,7 +2,8 @@ const button = document.getElementById('converte-button')
 const select = document.getElementById('select-currency')
 const dolar = 5.29
 const euro = 5.27
-const bitcon = 108.957
+const yen = 27.86
+const bitcon = 0.0000090
 const convertValues = () => {
     const inputReal = document.getElementById("input-real").value
     const realValueText = document.getElementById("real-value-text")
@@ -27,8 +28,18 @@ const convertValues = () => {
         currency: 'EUR' }
         ).format(inputReal/euro)
     }
+    if(select.value === '¥ Yen'){
+        
+        currencyValeuText.innerHTML = new Intl.NumberFormat('ja-JP',
+        { style: 'currency',
+        currency: 'JPY' }
+        ).format((inputReal*yen))
+        // currencyValeuText.innerHTML = (
+        // (inputReal*yen).toFixed(4))
+        
+    }
     if (select.value === '₿ Bitcoin'){
-        currencyValeuText.innerHTML = ((inputReal/bitcon).toFixed(5))
+        currencyValeuText.innerHTML = (parseFloat(inputReal*bitcon).toFixed(7))
 
     }
         
@@ -50,6 +61,10 @@ const changeCurrency = () => {
     if(select.value === 'US$ Dolar Americano'){
         currencyName.innerHTML = 'Dolar'
         currencyImage.src = 'img/estados-unidos (1) 1.png'
+    }
+    if(select.value === '¥ Yen'){
+        currencyName.innerHTML = 'Yen'
+        currencyImage.src = 'img/JP.png'
     }
     
     convertValues()
